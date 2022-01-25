@@ -1,0 +1,41 @@
+
+  <h1>Shuffle and Sort</h1>
+  <div class="card">
+
+    <section class="desktop">
+      
+      <ul class="desktop_list" >
+        <li *ngFor="let color of colors"
+        [style.background]="color.colorCode"
+        >
+        {{color.id}}
+        </li>
+      </ul>
+
+      <div class="action_btn">
+        <button class="btn blue active" (click)="shuffle()">shuffle</button>
+        <button class="btn blue" (click)="sort()">sort</button>
+      </div>
+
+    </section>
+
+     <section class="mobile">
+
+      <div class="action_btn">
+        <button class="btn blue active" (click)="shuffle()">SHUFFLE</button>
+        <button class="btn blue" (click)="sort()">SORT</button>
+      </div>
+       
+      <ul class="mobile_list">
+        <li *ngFor="let color of colors"
+        [style.borderLeftColor]="color.colorCode"     
+        >
+        {{color.id}}
+        </li>
+      </ul>
+      
+     </section>
+    
+  </div>  
+
+
